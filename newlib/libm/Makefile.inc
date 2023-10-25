@@ -88,6 +88,9 @@ endif
 if HAVE_LIBM_MACHINE_RISCV
 include %D%/machine/riscv/Makefile.inc
 endif
+if HAVE_LIBM_MACHINE_VENTUS
+include %D%/machine/riscv/Makefile.inc
+endif
 if HAVE_LIBM_MACHINE_X86_64
 include %D%/machine/x86_64/Makefile.inc
 include %D%/ld80/Makefile.inc

@@ -21,7 +21,7 @@ m4_foreach_w([SYS_DIR], [
   or1k
   rdos rtems
   sh sysmec sysnec810 sysnecv850 sysvi386 sysvnecv70
-  tic80 tirtos
+  tic80 tirtos ventus
   w65
   xtensa
   z8ksim
@@ -58,7 +58,7 @@ m4_foreach_w([MACHINE], [
   riscv rl78 rx
   sh sparc spu
   tic4x tic6x tic80
-  v850 visium
+  v850 visium ventus
   w65
   x86_64 xc16x xstormy16 xtensa
   z8k
