@@ -154,6 +154,9 @@ endif
 if HAVE_LIBC_MACHINE_V850
 include %D%/v850/Makefile.inc
 endif
+if HAVE_LIBC_MACHINE_VENTUS
+include %D%/riscv/Makefile.inc
+endif
 if HAVE_LIBC_MACHINE_VISIUM
 include %D%/visium/Makefile.inc
 endif

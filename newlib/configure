@@ -603,6 +603,8 @@ HAVE_MULTISUBDIR_FALSE
 HAVE_MULTISUBDIR_TRUE
 HAVE_DOC_FALSE
 HAVE_DOC_TRUE
+HAVE_LIBM_MACHINE_VENTUS_FALSE
+HAVE_LIBM_MACHINE_VENTUS_TRUE
 HAVE_LIBM_MACHINE_XTENSA_FALSE
 HAVE_LIBM_MACHINE_XTENSA_TRUE
 HAVE_LIBM_MACHINE_X86_64_FALSE
@@ -651,6 +653,8 @@ HAVE_LIBC_MACHINE_X86_64_FALSE
 HAVE_LIBC_MACHINE_X86_64_TRUE
 HAVE_LIBC_MACHINE_W65_FALSE
 HAVE_LIBC_MACHINE_W65_TRUE
+HAVE_LIBC_MACHINE_VENTUS_FALSE
+HAVE_LIBC_MACHINE_VENTUS_TRUE
 HAVE_LIBC_MACHINE_VISIUM_FALSE
 HAVE_LIBC_MACHINE_VISIUM_TRUE
 HAVE_LIBC_MACHINE_V850_FALSE
@@ -779,6 +783,8 @@ HAVE_LIBC_SYS_XTENSA_DIR_FALSE
 HAVE_LIBC_SYS_XTENSA_DIR_TRUE
 HAVE_LIBC_SYS_W65_DIR_FALSE
 HAVE_LIBC_SYS_W65_DIR_TRUE
+HAVE_LIBC_SYS_VENTUS_DIR_FALSE
+HAVE_LIBC_SYS_VENTUS_DIR_TRUE
 HAVE_LIBC_SYS_TIRTOS_DIR_FALSE
 HAVE_LIBC_SYS_TIRTOS_DIR_TRUE
 HAVE_LIBC_SYS_TIC80_DIR_FALSE
@@ -5505,6 +5511,13 @@ else
   HAVE_LIBC_SYS_TIRTOS_DIR_TRUE='#'
   HAVE_LIBC_SYS_TIRTOS_DIR_FALSE=
 fi
+ if test "${sys_dir}" = ventus; then
+  HAVE_LIBC_SYS_VENTUS_DIR_TRUE=
+  HAVE_LIBC_SYS_VENTUS_DIR_FALSE='#'
+else
+  HAVE_LIBC_SYS_VENTUS_DIR_TRUE='#'
+  HAVE_LIBC_SYS_VENTUS_DIR_FALSE=
+fi
  if test "${sys_dir}" = w65; then
   HAVE_LIBC_SYS_W65_DIR_TRUE=
   HAVE_LIBC_SYS_W65_DIR_FALSE='#'
@@ -6114,6 +6127,13 @@ else
   HAVE_LIBC_MACHINE_VISIUM_TRUE='#'
   HAVE_LIBC_MACHINE_VISIUM_FALSE=
 fi
+ if test "${machine_dir}" = ventus; then
+  HAVE_LIBC_MACHINE_VENTUS_TRUE=
+  HAVE_LIBC_MACHINE_VENTUS_FALSE='#'
+else
+  HAVE_LIBC_MACHINE_VENTUS_TRUE='#'
+  HAVE_LIBC_MACHINE_VENTUS_FALSE=
+fi
  if test "${machine_dir}" = w65; then
   HAVE_LIBC_MACHINE_W65_TRUE=
   HAVE_LIBC_MACHINE_W65_FALSE='#'
@@ -6398,6 +6418,14 @@ fi
 else
   HAVE_LIBM_MACHINE_XTENSA_TRUE='#'
   HAVE_LIBM_MACHINE_XTENSA_FALSE=
+fi
+
+   if test "${libm_machine_dir}" = "ventus"; then
+  HAVE_LIBM_MACHINE_VENTUS_TRUE=
+  HAVE_LIBM_MACHINE_VENTUS_FALSE='#'
+else
+  HAVE_LIBM_MACHINE_VENTUS_TRUE='#'
+  HAVE_LIBM_MACHINE_VENTUS_FALSE=
 fi
 
 
@@ -7695,6 +7723,10 @@ if test -z "${HAVE_LIBC_SYS_TIRTOS_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_TIRTOS
   as_fn_error $? "conditional \"HAVE_LIBC_SYS_TIRTOS_DIR\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
+if test -z "${HAVE_LIBC_SYS_VENTUS_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_VENTUS_DIR_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_LIBC_SYS_VENTUS_DIR\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
 if test -z "${HAVE_LIBC_SYS_W65_DIR_TRUE}" && test -z "${HAVE_LIBC_SYS_W65_DIR_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_LIBC_SYS_W65_DIR\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
@@ -7951,6 +7983,10 @@ if test -z "${HAVE_LIBC_MACHINE_VISIUM_TRUE}" && test -z "${HAVE_LIBC_MACHINE_VI
   as_fn_error $? "conditional \"HAVE_LIBC_MACHINE_VISIUM\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
+if test -z "${HAVE_LIBC_MACHINE_VENTUS_TRUE}" && test -z "${HAVE_LIBC_MACHINE_VENTUS_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_LIBC_MACHINE_VENTUS\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
 if test -z "${HAVE_LIBC_MACHINE_W65_TRUE}" && test -z "${HAVE_LIBC_MACHINE_W65_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_LIBC_MACHINE_W65\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
@@ -8045,6 +8081,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_LIBM_MACHINE_XTENSA_TRUE}" && test -z "${HAVE_LIBM_MACHINE_XTENSA_FALSE}"; then
   as_fn_error $? "conditional \"HAVE_LIBM_MACHINE_XTENSA\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${HAVE_LIBM_MACHINE_VENTUS_TRUE}" && test -z "${HAVE_LIBM_MACHINE_VENTUS_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_LIBM_MACHINE_VENTUS\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${HAVE_DOC_TRUE}" && test -z "${HAVE_DOC_FALSE}"; then
